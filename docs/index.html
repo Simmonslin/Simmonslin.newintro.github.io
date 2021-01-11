@@ -24,7 +24,9 @@
   
   </script>		
 <style>
-span.clock{color:#ffffff;
+.clock{color:#ffffff;
+       background-color:#000000;
+	background-size:25% 25%;
             size:25% 25%;
 	    font-family:fantasy;
 	    letter-spacing:20px;
@@ -33,7 +35,7 @@ span.clock{color:#ffffff;
 	    padding:none;
 	    padding-top:5px;
 	    left:700px;
-	    position:absolute;
+	    position:fixed;
         } 
 	
 	
@@ -164,8 +166,8 @@ span.three{font-family:fantasy;
 
 </head>
 
-<body onload="startTime()">
- <span class="clock">		
+<span class="clock">	
+<body onload="startTime()">	
 <div id="clock"></div>
 </span>
 	
