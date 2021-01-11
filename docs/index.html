@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 <head>
-<style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+ <style>
+ span.clock{color:#66ff33;
+            size:25% 25%;
+	    font-family:Monoton;
+	    letter-spacing:20px;
+	    font-size:50px;
+	    position:absolute;
+	    top:0px;
+	    right:10px;
+           } 
+
+  <script type="text/Javascript">
+    function startTime(){
+      var today = new Date();
+      var hh = today.getHours();
+      var mm = today.getMinutes();
+      var ss = today.getSeconds();
+      mm = checkTime(mm);
+      ss = checkTime(ss);
+      document.getElementById('clock').innerHTML = hh + ":" + mm + ":" + ss;
+      var timeoutId = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i){
+      if(i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+  
+  </script>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 body{background-image:url("tomorrow.jpg");
      background-repeat:no-repeat;
 	 background-size:100% 350px;
@@ -139,9 +180,13 @@ span.three{font-family:fantasy;
 
 </style>
 </head>
-<body>
+<body onload="startTime()">
 
-
+<span class="clock">	
+<div id="clock()"></div>
+</span>
+	
+	
 <header>
 <nav>
 <ul>
@@ -154,12 +199,7 @@ span.three{font-family:fantasy;
 </ul>
 </nav>
 </header>
-	
-<span class="clock">
-<a href=" https://simmonslin.github.io/Simmonslin.clock.github.io/."></a>
-</span>	
-
-	
+		
 
 <div class="board">
 
