@@ -3,7 +3,7 @@
 <head>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
- <style>
+<style>
  span.clock{color:#66ff33;
             size:25% 25%;
 	    font-family:Monoton;
@@ -13,34 +13,6 @@
 	    padding-right:10px;
 	    top:3px;
            } 
-
-  <script type="text/Javascript">
-    function startTime(){
-      var today = new Date();
-      var hh = today.getHours();
-      var mm = today.getMinutes();
-      var ss = today.getSeconds();
-      mm = checkTime(mm);
-      ss = checkTime(ss);
-      document.getElementById('clock').innerHTML = hh + ":" + mm + ":" + ss;
-      var timeoutId = setTimeout(startTime, 500);
-    }
-
-    function checkTime(i){
-      if(i < 10) {
-        i = "0" + i;
-      }
-      return i;
-    }
-  
-  </script>	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 body{background-image:url("tomorrow.jpg");
@@ -165,14 +137,28 @@ span.three{font-family:fantasy;
 		   top:1680px;
            
 }
-
-
+</style>	
 	
-	
-   
+ <script type="text/Javascript">
+    function startTime(){
+      var today = new Date();
+      var hh = today.getHours();
+      var mm = today.getMinutes();
+      var ss = today.getSeconds();
+      mm = checkTime(mm);
+      ss = checkTime(ss);
+      document.getElementById('clock').innerHTML = hh + ":" + mm + ":" + ss;
+      var timeoutId = setTimeout(startTime, 500);
+    }
 
-
-</style>
+    function checkTime(i){
+      if(i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+  
+  </script>	
 </head>
 <body onload="startTime()">
 
